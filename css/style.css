@@ -1,0 +1,43 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+/* :root { 
+   
+}*/
+
+/* @font-face { 
+  font-family: ;
+  src: url();
+}*/ 
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+}
+
+.layers {
+  perspective: 1000px;
+}
+
+.layers_container {
+   height: 100vh;
+}
+
+.layers_item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center; 
+  transform: rotateX(var(--move-x)) rotateY(var(--move-y));
+}
