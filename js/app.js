@@ -1,8 +1,10 @@
-document.addEventListener('mousemove', e => {
-    Object.assign(documentElement, {
-        style: `
-        --move-x: ${e.clientX}deg;
-        --move-y: ${e.clientY}deg;
-        `
-    })
-})
+document.addEventListener("mousemove", parallax);
+        function parallax(event) {
+            this.querySelectorAll(".mouse").forEach((shift) => {
+                const position = shift.getAttribute("value");
+                const x = (window.innerWidth - event.pageX * position) / 90;
+                const y = (window.innerHeight - event.pageY * position) / 90;
+ 
+                shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+            });
+        }
