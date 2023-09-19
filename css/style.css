@@ -1,86 +1,71 @@
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
-:root { 
-   --index: calc(1vw + 1vh);
-   --transition: 1.5s cubic-bezier(.05, .5, 0, 1);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-/* @font-face { 
-  font-family: ;
-  src: url();
-}*/ 
+:root { 
+  --index: calc(1vw + 1vh);
+  --transition: 1.5s cubic-bezier(.05, .5, 0, 1);
+}
 
 body {
-  background-color: #000;
-  color: #fff;
+  background-color: #000000;
+  color: white;
 }
 
-.logo {
---logo-size: calc(var(--index) * 8);
-  width: calc(var(--logo-size));
-  height: calc(var(--logo-size));
-  background-repeat: no-repeat;
-  left: calc(50% - calc(var(--logo-size) / 2));
-  top: calc(var(--index) * 2);
-  z-index: 1;
-}
-
-.layers {
-  perspective: 1000px;
-  overflow: hidden ;
-}
-
-.layers_container {
-   height: 100vh;
-   min-height: 500px;
-   transform-style: preserve-3d;
-   transform: rotateX(var(--move-y)) rotateY(var(--move-x));
-   will-change: transform;
-   transition: transform var(--transition);
-}
-
-.layers_item {
-  position: absolute;
-  inset: -5vw;
-  background-size: cover;
-  background-position: center; 
+.mouse_move {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  will-change: transform, opacity;
 }
 
-.layer-1 {
-  transform: translateZ(-60px) scale(1.06);
+.mouse_move h2 {
+  position: relative;
+  font-size: 100px;
+  color: white;
 }
 
-.layer-2 {
-  transform: translateZ(80px) scale(0.88);
+.mouse_move img {
+  position: absolute;
 }
 
-.layer-3 {
-  transform: translateZ(180px) scale(0.88);
+#img1 {
+  height: 120%;
+  width: 120%;
+  z-index: -1;
 }
 
-.layer-4 {
-  transform: translateZ(300px) scale(0.88);
+#img2 {
+  height: 110%;
+  width: 110%;
+  bottom: -10%;
+  left: -1%;
 }
 
-.hero_content {
-  font-size: calc(var(--index) * 3);
-  text-align: center;
-  letter-spacing: calc(var(--index) * -.15);
-  line-height: 1.5em;
-  margin-top: calc(var(--index) * 5);
-} 
+#img3 {
+  height: 30%;
+  width: 100%;
+  z-index: 0;
+}
 
-.hero_content_p {
-  text-transform: none;
-  letter-spacing: normal;
-  font-size: calc(var(--index) * 1.7);
-  line-height: 2;
+#img4 {
+  right: 50%;
+  height: 100%;
+  width: 70%;
+  z-index: -1;
+}
+
+#img5 {
+  height: 100px;
+  width: 100px;
+  z-index: -1000;
 }
 
 .layer-2, .layer-3, .layer-4 {
