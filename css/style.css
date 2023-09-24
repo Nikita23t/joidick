@@ -6,8 +6,8 @@
 }
 
 :root { 
-  --index: calc(1vw + 1vh);
-  --transition: 1.5s cubic-bezier(.05, .5, 0, 1);
+  --logo: calc(10vw + 10vh);
+  --foot: cals(90vw + 90vh);
 }
 
 body {
@@ -23,13 +23,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  will-change: transform, opacity;
+  will-change: transform;
 }
 
 .mouse_move h2 {
   position: relative;
   font-size: 100px;
   color: white;
+  top: 10%;
+  justify-content: center;
+  align-items: center;
 }
 
 .mouse_move img {
@@ -37,37 +40,134 @@ body {
 }
 
 #img1 {
-  height: 120%;
-  width: 120%;
+  height: 130%;
+  width: 130%;
   z-index: -1;
 }
 
 #img2 {
-  height: 110%;
-  width: 110%;
-  bottom: -10%;
-  left: -1%;
-}
-
-#img3 {
-  height: 30%;
-  width: 100%;
-  z-index: 0;
-}
-
-#img4 {
   right: 50%;
   height: 100%;
   width: 70%;
   z-index: -1;
 }
 
-#img5 {
-  height: 100px;
-  width: 100px;
-  z-index: -1000;
+#img6 {
+  height: 110%;
+  width: 120%;
+  bottom: -20%;
+  left: 1%;
 }
 
-.layer-2, .layer-3, .layer-4 {
-  pointer-events: none;
+#logo {
+  display: block;
+  justify-content: center;
+  position: relative;
+  height: var(--logo);
+  width: var(--logo);
+  right: -38%;
+  top: -15%;
+  z-index: 10;
+}
+
+.link_to_buy {
+  display: block;
+  justify-content: center;
+  position: relative;
+  height: 50px;
+  width: 200px;
+  right: 45%;
+  top: 20%;
+  z-index: 10;
+  color: #fff
+}
+
+#text_for_buying {
+  display: block;
+  justify-content: center;
+  position: center;
+  text-align: left;
+  width: 30%;
+  color: #fff;
+  z-index: -1;
+  margin: 50px;
+}
+
+.button {
+  width: 250px;
+  height: 70px;
+  border-radius: 60px;
+  font-size: large;
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.cooking {
+  display: inline-block;
+  margin: 20px;
+}
+
+.cooking1 {
+  width: 400px;
+  float: left;
+  margin-right: 40px;
+}
+
+.cooking2 {
+  width: 400px;
+  float: left;
+  margin-right: 40px;
+}
+
+#cooking3 {
+  width: 400px;
+  float: left;
+  margin-right: 40px;
+}
+
+.footer {
+  background-color: #343434;
+  text-align: center; 
+  height: 200px;
+  width: 100%;
+  bottom: 0%;
+  font-size: 19px;
+  font-weight: bold;
+  color: #a2a2a2; 
+  display: inline-block;
+}
+
+.FAQ {
+  width: var(--foot);
+  margin: 50px;
+  margin-right: 240px;
+  top: 100%;
+  float: left;
+}
+
+.support {
+  width: var(--foot);
+  margin: 50px;
+  margin-right: 240px;
+  top: 100%;
+  float: left;
+}
+
+.social {
+  width: var(--foot);
+  margin: 50px;
+  margin-right: 240px;
+  top: 100%;
+  float: left;
+}
+
+.link {
+  color: #c8c8c8;
+  text-decoration: none;
+  text-transform: uppercase;
 }
