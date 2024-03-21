@@ -5,11 +5,6 @@
   font-family: sans-serif;
 }
 
-:root { 
-  --logo: calc(10vw + 10vh);
-  --foot: cals(90vw + 90vh);
-}
-
 body {
   background-color: #000000;
   color: white;
@@ -57,17 +52,6 @@ body {
   width: 120%;
   bottom: -20%;
   left: 1%;
-}
-
-#logo {
-  display: block;
-  justify-content: center;
-  position: relative;
-  height: var(--logo);
-  width: var(--logo);
-  right: -38%;
-  top: -15%;
-  z-index: 10;
 }
 
 .button {
