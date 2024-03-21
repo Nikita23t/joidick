@@ -53,18 +53,3 @@ body {
   bottom: -20%;
   left: 1%;
 }
-
-.button {
-  width: 250px;
-  height: 70px;
-  border-radius: 60px;
-  font-size: large;
-  color: #fff;
-  background-color: transparent;
-  border-color: #fff;
-}
-
-.button:hover {
-  cursor: pointer;
-}
-
